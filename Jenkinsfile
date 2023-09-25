@@ -16,7 +16,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh 'mvn package -DskipTests'
+                bat 'mvn package -DskipTests'
             }
         }
 
@@ -28,7 +28,7 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                sh 'java -jar ./target/book-1.0.jar'
+                bat 'java -jar ./target/book-1.0.jar'
             }
         }
     }
